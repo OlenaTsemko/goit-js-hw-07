@@ -51,15 +51,13 @@ function createBoxes(amount) {
   let step = 30;
 
   [...boxesRef.children].forEach(element => {
+    if (element !== boxesRef.firstElementChild) {
+      step += 10;
+    }
+
     element.style.width = `${step}px`;
     element.style.height = `${step}px`;
     element.style.backgroundColor = `${randColor()}`;
-
-    if (element !== boxesRef.firstElementChild) {
-      step += 10;
-      element.style.width = `${step}px`;
-      element.style.height = `${step}px`;
-    }
   });
 }
 
