@@ -25,6 +25,7 @@ const arr = [];
 
 function inputHandler() {
   arr.length = inputNumberRef.value;
+  btnRenderRef.addEventListener('click', btnRenderHandler);
 }
 
 function btnRenderHandler() {
@@ -34,12 +35,10 @@ function btnRenderHandler() {
 
 function btnDestroyHandler() {
   // console.log('очищаем коллекцию дивов');
-  btnRenderRef.removeEventListener('click', btnRenderHandler);
   destroyBoxes();
 }
 
 inputNumberRef.addEventListener('input', inputHandler);
-btnRenderRef.addEventListener('click', btnRenderHandler);
 btnDestroyRef.addEventListener('click', btnDestroyHandler);
 
 function createBoxes(amount) {
@@ -65,6 +64,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
+  btnRenderRef.removeEventListener('click', btnRenderHandler);
   boxesRef.innerHTML = '';
   inputNumberRef.value = '';
 }
