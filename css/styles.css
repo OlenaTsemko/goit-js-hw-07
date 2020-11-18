@@ -1,0 +1,40 @@
+section {
+  padding-bottom: 15px;
+}
+
+.section-title {
+  text-align: center;
+}
+
+/* Задание 3 */
+.gallery {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.gallery-item {
+  width: calc ((100% - 30px) / 3);
+}
+
+.gallery-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.gallery-item img {
+  width: 100%;
+}
+
+/* Задание 6 */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
