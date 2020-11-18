@@ -34,6 +34,7 @@ function btnRenderHandler() {
 
 function btnDestroyHandler() {
   // console.log('очищаем коллекцию дивов');
+  btnRenderRef.removeEventListener('click', btnRenderHandler);
   destroyBoxes();
 }
 
