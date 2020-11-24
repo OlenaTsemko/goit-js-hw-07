@@ -9,7 +9,7 @@ const inputNameRef = document.querySelector('#name-output');
 // console.log(inputNameRef);
 
 inputRef.addEventListener('input', event => {
-  inputNameRef.textContent = event.target.value;
+  inputNameRef.textContent = event.target.value.trim();
   if (inputNameRef.textContent.length === 0) {
     inputNameRef.textContent = 'незнакомец';
   }
